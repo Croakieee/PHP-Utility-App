@@ -18,4 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>QR Code Generator</h1>
     <form method="post">
         <label for="text_to_encode">Text to Encode:</label>
-        <input type="text" id="text_to_encode" name="text_to_encode" value="<?php echo $textToEncode; ?>"
+        <input type="text" id="text_to_encode" name="text_to_encode" value="<?php echo $textToEncode; ?>" required>
+        <button type="submit">Generate QR Code</button>
+    </form>
+    <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+        <p>QR Code Generated. <a href="qrcode.png" download>Download QR Code</a></p>
+    <?php endif; ?>
+</body>
+</html>
