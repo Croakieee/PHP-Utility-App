@@ -1,96 +1,68 @@
 # PHP Utility App
 
-This PHP utility application provides a collection of useful functions for various tasks. You can integrate these functions into your PHP projects for enhanced functionality.
+This PHP utility application provides a versatile collection of useful functions for various tasks. Additionally, it includes a simple web interface to interact with some of the functions visually.
 
 ## Functions
 
 1. **GenerateRandomPassword:**
    Generates a random password with the specified length.
 
-    ```php
-    $password = GenerateRandomPassword(12);
-    ```
-
 2. **CalculateAge:**
    Calculates the age based on the given birthdate.
-
-    ```php
-    $birthdate = '1990-01-01';
-    $age = CalculateAge($birthdate);
-    ```
 
 3. **FormatCurrency:**
    Formats a numeric value as currency with a specified currency code.
 
-    ```php
-    $amount = 1000.50;
-    $formattedAmount = FormatCurrency($amount, 'USD');
-    ```
-
 4. **SendEmail:**
    Sends an email using the `mail` function with a simple message.
-
-    ```php
-    $to = 'recipient@example.com';
-    $subject = 'Test Email';
-    $message = 'This is a test email.';
-    SendEmail($to, $subject, $message);
-    ```
 
 5. **EncryptString:**
    Encrypts a string using the `password_hash` function.
 
-    ```php
-    $stringToEncrypt = 'SensitiveData';
-    $encryptedString = EncryptString($stringToEncrypt);
-    ```
-
 6. **DecryptString:**
    Decrypts a previously encrypted string using `password_verify`.
-
-    ```php
-    $originalString = DecryptString($encryptedString);
-    ```
 
 7. **GenerateThumbnail:**
    Generates a thumbnail image from a given image file.
 
-    ```php
-    $sourceImagePath = 'path/to/source/image.jpg';
-    $thumbnailImagePath = 'path/to/save/thumbnail.jpg';
-    GenerateThumbnail($sourceImagePath, $thumbnailImagePath, 100, 100);
-    ```
-
 8. **IsWeekend:**
    Checks if a given date falls on a weekend.
-
-    ```php
-    $dateToCheck = '2023-01-01';
-    $isWeekend = IsWeekend($dateToCheck);
-    ```
 
 9. **ValidateEmail:**
    Validates an email address using a simple regex pattern.
 
-    ```php
-    $emailToValidate = 'user@example.com';
-    $isValidEmail = ValidateEmail($emailToValidate);
-    ```
-
 10. **GenerateQRCode:**
     Generates a QR code image for a given text.
 
-    ```php
-    $textToEncode = 'https://example.com';
-    GenerateQRCode($textToEncode, 'path/to/save/qrcode.png');
-    ```
+11. **GenerateUUID:**
+    Generates a Universally Unique Identifier (UUID).
+
+12. **CompressImage:**
+    Compresses an image file to reduce file size.
+
+13. **ReverseString:**
+    Reverses the characters in a given string.
+
+14. **ConvertToUppercase:**
+    Converts a string to uppercase.
+
+15. **GetFileExtension:**
+    Retrieves the file extension from a file path.
+
+## Web Interface
+
+1. **Password Generator:**
+   Accessible at `/password_generator.php`, this page allows you to generate random passwords by specifying the length.
+
+2. **QR Code Generator:**
+   Accessible at `/qrcode_generator.php`, this page enables you to generate QR codes for text input.
 
 ## Usage
 
 1. Clone the repository to your local machine.
-2. Include the `utility_functions.php` file in your PHP project.
-3. Utilize the functions as needed in your PHP code.
+2. Configure your web server to serve PHP files.
+3. Visit the web interface pages to interact with the functions visually.
+4. Include the `utility_functions.php` file in your PHP project.
+5. Utilize the functions as needed in your PHP code.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
